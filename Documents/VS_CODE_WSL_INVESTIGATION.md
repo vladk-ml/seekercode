@@ -45,3 +45,5 @@ VSCODE_DEV=1 \
 --disable-gpu-compositing \
 --force-renderer-accessibility \
 --disable-native-titlebar
+
+Last Updated: 2024-11-15
