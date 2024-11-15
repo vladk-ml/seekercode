@@ -240,8 +240,10 @@ function patchFetch(originalFetch: typeof globalThis.fetch, configProvider: ExtH
 											} else {
 												this.options.headers[i + 1] = proxyAuthorization;
 											}
+										} else if (typeof (this.options.headers as Headers).set === 'function') {
+											(this.options.headers as Headers).set('Proxy-Authorization', proxyAuthorization);
 										} else {
-											this.options.headers['Proxy-Authorization'] = proxyAuthorization;
+											(this.options.headers as Record<string, string>)['Proxy-Authorization'] = proxyAuthorization;
 										}
 										this.dispatch(this.options, this);
 									} else {
