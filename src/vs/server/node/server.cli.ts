@@ -454,7 +454,7 @@ function asExtensionIdOrVSIX(inputs: string[] | undefined) {
 }
 
 function fatal(message: string, err: any): void {
-	console.error('Unable to connect to VS Code server: ' + message);
+	console.error('Unable to connect to VSCodium server: ' + message);
 	console.error(err);
 	process.exit(1);
 }

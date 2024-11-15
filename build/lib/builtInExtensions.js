@@ -45,9 +45,7 @@ function isUpToDate(extension) {
     }
 }
 function getExtensionDownloadStream(extension) {
-    const galleryServiceUrl = productjson.extensionsGallery?.serviceUrl;
-    return (galleryServiceUrl ? ext.fromMarketplace(galleryServiceUrl, extension) : ext.fromGithub(extension))
-        .pipe(rename(p => p.dirname = `${extension.name}/${p.dirname}`));
+    return ext.fromGithub(extension).pipe(rename(p => p.dirname = `${extension.name}/${p.dirname}`));
 }
 function getExtensionStream(extension) {
     // if the extension exists on disk, use those files instead of downloading anew

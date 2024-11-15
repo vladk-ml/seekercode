@@ -67,7 +67,7 @@ export const terminalSuggestConfiguration: IStringDictionary<IConfigurationPrope
 		type: 'object',
 		properties: {
 			'pwshCode': {
-				description: localize('suggest.builtinCompletions.pwshCode', 'Custom PowerShell argument completers will be registered for VS Code\'s `code` and `code-insiders` CLIs. This is currently very basic and always suggests flags and subcommands without checking context.'),
+				description: localize('suggest.builtinCompletions.pwshCode', 'Custom PowerShell argument completers will be registered for VSCodium\'s `codium` and `codium-insiders` CLIs. This is currently very basic and always suggests flags and subcommands without checking context.'),
 				type: 'boolean'
 			},
 			'pwshGit': {

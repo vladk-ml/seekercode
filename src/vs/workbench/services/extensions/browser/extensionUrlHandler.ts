@@ -84,7 +84,7 @@ export interface ExtensionUrlHandlerEvent {
 type ExtensionUrlHandlerClassification = {
 	owner: 'joaomoreno';
 	readonly extensionId: { classification: 'PublicNonPersonalData'; purpose: 'FeatureInsight'; comment: 'The ID of the extension that should handle the URI' };
-	comment: 'This is used to understand the drop funnel of extension URI handling by the OS & VS Code.';
+	comment: 'This is used to understand the drop funnel of extension URI handling by the OS & VSCodium.';
 };
 
 interface ExtensionUrlReloadHandlerEvent {
@@ -96,7 +96,7 @@ type ExtensionUrlReloadHandlerClassification = {
 	owner: 'sandy081';
 	readonly extensionId: { classification: 'PublicNonPersonalData'; purpose: 'FeatureInsight'; comment: 'The ID of the extension that should handle the URI' };
 	readonly isRemote: { classification: 'PublicNonPersonalData'; purpose: 'FeatureInsight'; comment: 'Whether the current window is a remote window' };
-	comment: 'This is used to understand the drop funnel of extension URI handling by the OS & VS Code.';
+	comment: 'This is used to understand the drop funnel of extension URI handling by the OS & VSCodium.';
 };
 
 /**
