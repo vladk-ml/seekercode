@@ -1,5 +1,5 @@
 {
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"configurations": [
 		{
 			"type": "node",
@@ -276,9 +276,6 @@
 				"hidden": true,
 			},
 			// This is read by the vscode-diagnostic-tools extension
-			"vscode-diagnostic-tools.debuggerScripts": [
-				"${workspaceFolder}/scripts/hot-reload-injected-script.js"
-			]
 		},
 		{
 			"type": "node",
@@ -554,6 +551,27 @@
 				"group": "monaco",
 				"order": 4
 			}
+		},
+		{
+			"type": "extensionHost",
+			"request": "launch",
+			"name": "Launch VS Code",
+			"runtimeExecutable": "${workspaceFolder}/scripts/code.sh",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}"
+			],
+			"outFiles": [
+				"${workspaceFolder}/out/**/*.js"
+			],
+			"preLaunchTask": "npm: compile"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Debug TypeScript",
+			"program": "${workspaceFolder}/src/index.ts",
+			"preLaunchTask": "tsc: build - tsconfig.json",
+			"outFiles": ["${workspaceFolder}/dist/**/*.js"]
 		}
 	],
 	"compounds": [
