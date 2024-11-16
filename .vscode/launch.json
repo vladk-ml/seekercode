@@ -1,7 +1,21 @@
 {
 	"version": "0.2.0",
 	"configurations": [
-		
+		{
+			"name": "Launch SeekerCode",
+			"type": "node",
+			"request": "launch",
+			"runtimeExecutable": "${workspaceFolder}/scripts/code.bat",
+			"runtimeArgs": [],
+			"env": {
+				"NODE_ENV": "development",
+				"VSCODE_DEV": "1"
+			},
+			"outFiles": [
+				"${workspaceFolder}/out/**/*.js"
+			]
+		},
+
 		{
 			"type": "node",
 			"request": "launch",
